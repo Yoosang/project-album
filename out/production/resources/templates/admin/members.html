@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link th:href="@{/css/bootstrap.min.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" style="max-width: 600px">
+    <div class="py-5 text-center">
+        <h2>회원 목록</h2> </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary float-end"
+                    onclick="location.href='addForm.html'"
+                    th:onclick="|location.href='@{admin/members/add}'|"
+                    type="button">
+                회원 등록
+            </button>
+        </div>
+    </div>
+    <hr class="my-4">
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>고객번호</th>
+                <th>고객명</th>
+                <th>아이디</th>
+                <th>비밀번호</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr th:each="member : ${members}">
+                <td><a href="item.html" th:href="@{/admin/members/{seq}(seq=${member.memberSeq})}" th:text="${member.memberSeq}">고객번호</a></td>
+                <td th:text="${member.name}">고객명</a></td>
+                <td th:text="${member.loginId}">아이디</td>
+                <td th:text="${member.password}">비밀번호</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

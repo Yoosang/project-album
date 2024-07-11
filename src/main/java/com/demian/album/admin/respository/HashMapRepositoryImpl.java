@@ -17,8 +17,8 @@ public class HashMapRepositoryImpl implements AdminRepositoy {
 
     @Override
     public Member insert(Member member) {
-        member.setId(++seq);
-        db.put(member.getId(), member);
+        member.setMemberSeq(++seq);
+        db.put(member.getMemberSeq(), member);
         return member;
     }
 

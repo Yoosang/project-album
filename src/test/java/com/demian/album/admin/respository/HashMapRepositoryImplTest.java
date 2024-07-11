@@ -2,14 +2,12 @@ package com.demian.album.admin.respository;
 
 import com.demian.album.admin.AdminRepositoy;
 import com.demian.album.admin.domain.Member;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class HashMapRepositoryImplTest {
 
@@ -31,7 +29,7 @@ class HashMapRepositoryImplTest {
         Member insertedMember = repository.insert(member);
 
         //then
-        Member findMember = repository.findById(member.getId());
+        Member findMember = repository.findById(member.getMemberSeq());
         assertThat(findMember).isEqualTo(insertedMember);
     }
 
@@ -62,8 +60,7 @@ class HashMapRepositoryImplTest {
         Member origin = new Member();
         origin.setName("test1");
         origin.setPassword("1234");
-        Member inserted = repository.insert(origin);
-        Long id = origin.getId();
+        Long id = origin.getMemberSeq();
 
         //when
         Member modified = new Member();

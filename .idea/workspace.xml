@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a9b32e-3625-49c2-8ee2-b85708b73c3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/domain/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/AdminRepositoy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/AdminRepositoy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/domain/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/respository/HashMapRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/respository/HashMapRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demian/album/admin/respository/HashMapRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demian/album/admin/respository/HashMapRepositoryImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +44,7 @@
         <option value="Interface" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -58,20 +59,23 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/Users/usang/IdeaProjects/album/build.gradle",
+    "last_opened_file_path": "/Users/usang/IdeaProjects/album/src/main/resources/templates/admin",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/admin" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -79,7 +83,7 @@
       <recent name="com.demian.album.admin.respository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HashMapRepositoryImplTest.update">
+  <component name="RunManager" selected="Application.AlbumApplication">
     <configuration name="AlbumApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.demian.album.AlbumApplication" />
       <module name="album.main" />
@@ -126,9 +130,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HashMapRepositoryImplTest.update" />
-        <item itemvalue="JUnit.HashMapRepositoryImplTest" />
         <item itemvalue="Application.AlbumApplication" />
+        <item itemvalue="JUnit.HashMapRepositoryImplTest" />
+        <item itemvalue="JUnit.HashMapRepositoryImplTest.update" />
       </list>
     </recent_temporary>
   </component>

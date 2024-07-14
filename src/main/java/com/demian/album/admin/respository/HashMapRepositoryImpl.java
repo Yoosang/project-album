@@ -36,6 +36,7 @@ public class HashMapRepositoryImpl implements AdminRepositoy {
     public void update(Long id, Member member) {
         Member targetMember = findById(id);
         targetMember.setName(member.getName());
+        targetMember.setLoginId(member.getLoginId());
         targetMember.setPassword(member.getPassword());
     }
 

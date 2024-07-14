@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a9b32e-3625-49c2-8ee2-b85708b73c3d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/html/members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/admin/members.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/domain/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/respository/HashMapRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/respository/HashMapRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demian/album/admin/respository/HashMapRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demian/album/admin/respository/HashMapRepositoryImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/members.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/members.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +73,10 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "/Users/usang/IdeaProjects/album/src/main/resources/templates/admin",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RecentsManager">

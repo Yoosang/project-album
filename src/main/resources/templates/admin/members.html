@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8">
     <link th:href="@{/css/bootstrap.min.css}"
-            href="../css/bootstrap.min.css" rel="stylesheet">
+          href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container" style="max-width: 600px">
     <div class="py-5 text-center">
-        <h2>회원 목록</h2> </div>
+        <h2>회원 목록</h2></div>
     <div class="row">
         <div class="col">
             <button class="btn btn-primary float-end"
                     onclick="location.href='addForm.html'"
-                    th:onclick="|location.href='@{admin/members/add}'|"
+                    th:onclick="|location.href='@{/admin/members/add}'|"
                     type="button">회원 등록
             </button>
         </div>
@@ -30,9 +30,8 @@
             </tr>
             </thead>
             <tbody>
-
             <tr th:each="member : ${members}">
-                <td><a href="item.html"
+                <td><a href="members.html"
                        th:href="@{/admin/members/{seq}(seq=${member.memberSeq})}"
                        th:text="${member.memberSeq}">고객번호</a>
                 </td>
@@ -40,10 +39,9 @@
                 <td th:text="${member.loginId}">아이디</td>
                 <td th:text="${member.password}">비밀번호</td>
             </tr>
-
             </tbody>
         </table>
     </div>
-</div> 
+</div>
 </body>
 </html>

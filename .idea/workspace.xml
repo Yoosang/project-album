@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a9b32e-3625-49c2-8ee2-b85708b73c3d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/html/members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/admin/members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/admin/member.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/admin/member.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/domain/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/respository/HashMapRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/respository/HashMapRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/members.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/addMember.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/addMember.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editMember.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editMember.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/member.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/member.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +48,7 @@
         <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="HTML File" />
+        <option value="Enum" />
       </list>
     </option>
   </component>

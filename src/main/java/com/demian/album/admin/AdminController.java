@@ -37,7 +37,8 @@ public class AdminController {
     }
 
     @GetMapping("/add")
-    public String addMemberView() {
+    public String addMemberView(Model model) {
+        model.addAttribute("member", new Member());
         return "admin/addMember";
     }
 

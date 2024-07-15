@@ -13,18 +13,28 @@
     <div class="py-5 text-center"><h2>회원 등록</h2>
     </div>
     <h4 class="mb-3">정보 입력</h4>
-    <form action="member.html" th:action method="post">
+    <form action="member.html" th:action th:object="${member}" method="post">
         <div>
             <label for="name">고객명</label>
-            <input type="text" id="name" name="name" class="form-control" placeholder="이름을 입력하세요">
+            <input type="text" id="name" th:field="*{name}" class="form-control" placeholder="이름을 입력하세요">
         </div>
         <div>
             <label for="loginId">ID</label>
-            <input type="text" id="loginId" name="loginId" class="form-control" placeholder="ID를 입력하세요">
+            <input type="text" id="loginId" th:field="*{loginId}" class="form-control" placeholder="ID를 입력하세요">
         </div>
         <div>
             <label for="password">비밀번호</label>
-            <input type="text" id="password" name="password" class="form-control" placeholder="비밀번호를 입력하세요">
+            <input type="text" id="password" th:field="*{password}" class="form-control" placeholder="비밀번호를 입력하세요">
+        </div>
+
+        <hr class="my-4">
+
+        <div>IP 체크 여부</div>
+        <div>
+            <div class="form-check">
+                <input type="checkbox" id="ipCheck" th:field="*{ipCheck}" class="form-check-input" >
+                <label for="ipCheck"class="form-check-label">IP 체크</label>
+            </div>
         </div>
         <hr class="my-4">
         <div class="row">

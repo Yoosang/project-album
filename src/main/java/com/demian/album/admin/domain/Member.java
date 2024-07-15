@@ -1,5 +1,6 @@
 package com.demian.album.admin.domain;
 
+import com.demian.album.admin.MemberType;
 import lombok.Data;
 
 @Data
@@ -9,6 +10,9 @@ public class Member {
     private String loginId;
     private String name;
     private String password;
+
+    private boolean ipCheck;
+    private MemberType memberType;
 
     public Member() {
     }

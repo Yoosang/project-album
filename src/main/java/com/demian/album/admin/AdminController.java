@@ -6,10 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
@@ -20,6 +17,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AdminController {
     private final AdminRepositoy adminRepositoy;
+
+    @ModelAttribute("memberTypes")
+    public MemberType[] memberTypes() {
+        return MemberType.values();
+    }
 
     @GetMapping
     public String members(Model model){
@@ -44,6 +46,8 @@ public class AdminController {
 
     @PostMapping("/add")
     public String addMember(Member member, RedirectAttributes redirectAttributes) {
+        log.info("MemberType: {}", member.getMemberType());
+
         adminRepositoy.insert(member);
         redirectAttributes.addAttribute("memberSeq", member.getMemberSeq());
         redirectAttributes.addAttribute("isSaved", true);

@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/templates/admin/member.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/admin/member.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/domain/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/MemberType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/MemberType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/respository/HashMapRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demian/album/admin/respository/HashMapRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/addMember.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/addMember.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editMember.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editMember.html" afterDir="false" />

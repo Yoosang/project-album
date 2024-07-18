@@ -39,6 +39,7 @@ public class HashMapRepositoryImpl implements AdminRepositoy {
         targetMember.setLoginId(member.getLoginId());
         targetMember.setPassword(member.getPassword());
         targetMember.setIpCheck(member.isIpCheck());
+        targetMember.setMemberType(member.getMemberType());
     }
 
     @Override

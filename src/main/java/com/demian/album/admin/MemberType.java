@@ -8,4 +8,9 @@ public enum MemberType {
     MemberType(String description){
         this.description = description;
     }
+
+
+    public String getDescription() {
+        return description;
+    }
 }

@@ -30,12 +30,20 @@
         <hr class="my-4">
 
         <div>IP 체크 여부</div>
-        <div>
-            <div class="form-check">
-                <input type="checkbox" id="ipCheck" th:field="*{ipCheck}" class="form-check-input" >
-                <label for="ipCheck"class="form-check-label">IP 체크</label>
-            </div>
+        <div class="form-check">
+            <input type="checkbox" id="ipCheck" th:field="*{ipCheck}" class="form-check-input" >
+            <label for="ipCheck"class="form-check-label">IP 체크</label>
         </div>
+
+        <hr class="my-4">
+
+        <div>회원 종류</div>
+        <div th:each="type: ${memberTypes}" class="form-check form-check-inline">
+            <input type="radio" th:field="*{memberType}" th:value="${type.name()}" class="form-check-input">
+            <label th:for="${#ids.prev('memberType')}" th:text="${type.description}" class="form-check-label">
+            </label>
+        </div>
+
         <hr class="my-4">
         <div class="row">
             <div class="col">

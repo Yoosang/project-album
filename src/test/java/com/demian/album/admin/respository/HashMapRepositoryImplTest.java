@@ -1,6 +1,6 @@
 package com.demian.album.admin.respository;
 
-import com.demian.album.admin.AdminRepositoy;
+import com.demian.album.admin.AdminRepository;
 import com.demian.album.admin.domain.Member;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.*;
 
 class HashMapRepositoryImplTest {
 
-    AdminRepositoy repository = new HashMapRepositoryImpl();
+    AdminRepository repository = new HashMapRepositoryImpl();
 
     @AfterEach
     void afterEach(){

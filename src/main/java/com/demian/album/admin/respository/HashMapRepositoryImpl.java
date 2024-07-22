@@ -1,6 +1,6 @@
 package com.demian.album.admin.respository;
 
-import com.demian.album.admin.AdminRepositoy;
+import com.demian.album.admin.AdminRepository;
 import com.demian.album.admin.domain.Member;
 import org.springframework.stereotype.Repository;
 
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-public class HashMapRepositoryImpl implements AdminRepositoy {
+public class HashMapRepositoryImpl implements AdminRepository {
 
     private static final Map<Long, Member> db = new HashMap<>();
     private static long seq = 0L;
@@ -38,6 +38,7 @@ public class HashMapRepositoryImpl implements AdminRepositoy {
         targetMember.setName(member.getName());
         targetMember.setLoginId(member.getLoginId());
         targetMember.setPassword(member.getPassword());
+        targetMember.setTelno(member.getTelno());
         targetMember.setIpCheck(member.isIpCheck());
         targetMember.setMemberType(member.getMemberType());
     }

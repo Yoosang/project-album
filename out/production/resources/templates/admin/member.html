@@ -14,7 +14,7 @@
         <h2>회원 상세</h2>
     </div>
 
-    <h2 th:if="${param.isSaved}"th:text="'저장 완료!'"></h2>
+    <h2 th:if="${param.isSaved}" th:text="'저장 완료!'"></h2>
 
     <div>
         <label for="memberSeq">고객번호</label>
@@ -32,6 +32,10 @@
         <label for="password">비밀번호</label>
         <input type="text" id="password" class="form-control" th:field="${member.password}" readonly>
     </div>
+    <div>
+        <label for="telno">전화번호</label>
+        <input type="text" id="telno" class="form-control" th:field="${member.telno}" readonly>
+    </div>
 
     <hr class="my-4">
 
@@ -39,12 +43,12 @@
     <div>
         <div class="form-check">
             <input type="checkbox" id="ipCheck" th:field="${member.ipCheck}" class="form-check-input" disabled>
-            <label for="ipCheck"class="form-check-label">IP 체크</label>
+            <label for="ipCheck" class="form-check-label">IP 체크</label>
         </div>
     </div>
 
     <hr class="my-4">
-    
+
     <div>회원 종류</div>
     <div th:each="type: ${memberTypes}" class="form-check form-check-inline">
         <input type="radio" th:field="${member.memberType}" th:value="${type.name()}" class="form-check-input" disabled>

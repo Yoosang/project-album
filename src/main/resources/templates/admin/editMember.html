@@ -9,6 +9,13 @@
     </style>
 </head>
 <body>
+<script th:inline="javascript">
+    const autoHyphen = (target) => {
+        target.value = target.value
+            .replace(/[^0-9]/g, '')
+            .replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
+    }
+</script>
 <div class="container">
     <div class="py-5 text-center"><h2>회원정보 변경</h2>
     </div>
@@ -28,6 +35,10 @@
         <div>
             <label for="password">비밀번호</label>
             <input type="text" id="password" class="form-control" th:field="*{password}">
+        </div>
+        <div>
+            <label for="password">휴대폰 번호</label>
+            <input type="text" maxlength="13" oninput="autoHyphen(this)" id="telno" th:field="*{telno}" class="form-control" placeholder="전화번호를 입력하세요">
         </div>
         <hr class="my-4">
 

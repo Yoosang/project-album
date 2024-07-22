@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/admin/members")
 @RequiredArgsConstructor
 public class AdminController {
-    private final AdminRepositoy adminRepositoy;
+    private final AdminRepository adminRepository;
 
     @ModelAttribute("memberTypes")
     public MemberType[] memberTypes() {
@@ -25,7 +25,7 @@ public class AdminController {
 
     @GetMapping
     public String members(Model model){
-        List<Member> members = adminRepositoy.findAll();
+        List<Member> members = adminRepository.findAll();
         log.info("Members = {}", members.toString());
         model.addAttribute("members", members);
         return "admin/members";
@@ -33,7 +33,7 @@ public class AdminController {
 
     @GetMapping("/{memberSeq}")
     public String member(@PathVariable long memberSeq, Model model){
-        Member member = adminRepositoy.findById(memberSeq);
+        Member member = adminRepository.findById(memberSeq);
         model.addAttribute("member", member);
         return "admin/member";
     }
@@ -48,7 +48,7 @@ public class AdminController {
     public String addMember(Member member, RedirectAttributes redirectAttributes) {
         log.info("MemberType: {}", member.getMemberType());
 
-        adminRepositoy.insert(member);
+        adminRepository.insert(member);
         redirectAttributes.addAttribute("memberSeq", member.getMemberSeq());
         redirectAttributes.addAttribute("isSaved", true);
         return "redirect:/admin/members/{memberSeq}";
@@ -56,21 +56,21 @@ public class AdminController {
 
     @GetMapping("/{memberSeq}/edit")
     public String editMemberView(@PathVariable Long memberSeq, Model model) {
-        Member member = adminRepositoy.findById(memberSeq);
+        Member member = adminRepository.findById(memberSeq);
         model.addAttribute("member", member);
         return "admin/editMember";
     }
 
     @PostMapping("/{memberSeq}/edit")
     public String editMember(@PathVariable Long memberSeq, Member member) {
-        adminRepositoy.update(memberSeq, member);
+        adminRepository.update(memberSeq, member);
         return "redirect:/admin/members/{memberSeq}";
     }
 
     @PostConstruct
     public void init() {
-        adminRepositoy.insert(new Member("testA", "테스트1", "1234"));
-        adminRepositoy.insert(new Member("testB", "테스트2", "5678"));
+        adminRepository.insert(new Member("testA", "테스트1", "1234"));
+        adminRepository.insert(new Member("testB", "테스트2", "5678"));
     }
 
 }

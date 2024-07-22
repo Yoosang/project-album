@@ -10,6 +10,7 @@ public class Member {
     private String loginId;
     private String name;
     private String password;
+    private String telno;
 
     private boolean ipCheck;
     private MemberType memberType;

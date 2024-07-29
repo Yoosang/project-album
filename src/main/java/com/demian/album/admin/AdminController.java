@@ -2,10 +2,14 @@ package com.demian.album.admin;
 
 import com.demian.album.admin.domain.Member;
 import jakarta.annotation.PostConstruct;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.ObjectUtils;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -45,8 +49,12 @@ public class AdminController {
     }
 
     @PostMapping("/add")
-    public String addMember(Member member, RedirectAttributes redirectAttributes) {
+    public String addMember(@Valid Member member, BindingResult result, RedirectAttributes redirectAttributes) {
         log.info("MemberType: {}", member.getMemberType());
+
+        if(result.hasErrors()){
+            return "admin/addMember";
+        }
 
         adminRepository.insert(member);
         redirectAttributes.addAttribute("memberSeq", member.getMemberSeq());

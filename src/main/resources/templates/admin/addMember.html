@@ -5,7 +5,13 @@
     <link href="../css/bootstrap.min.css"
           th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
     <style>
-     .container {max-width: 560px;}
+        .container {
+            max-width: 560px;
+        }
+        .field-error {
+            border-color: #dc3545;
+            color: #dc3545;
+        }
     </style>
 </head>
 <body>
@@ -21,25 +27,35 @@
     </div>
     <h4 class="mb-3">정보 입력</h4>
     <form action="member.html" th:action th:object="${member}" method="post">
+
+        <div th:if="${#fields.hasGlobalErrors()}">
+            <p class="field-error" th:each="err : ${#fields.globalErrors()}" th:text="${err}">전체 오류 메시지
+            </p>
+        </div>
+
+
         <hr class="my-4">
         <div>
             <label for="name">이름</label>
-            <input type="text" id="name" th:field="*{name}" class="form-control" placeholder="이름을 입력하세요">
+            <input type="text" id="name" th:field="*{name}" class="form-control" th:errorclass="field-error" placeholder="이름을 입력하세요">
+            <div class="field-error" th:errors="*{name}" />
         </div>
 
         <div>
-            <label for="loginId">ID</label>
-            <input type="text" id="loginId" th:field="*{loginId}" class="form-control" placeholder="ID를 입력하세요">
+            <label for="loginId">로그인 ID</label>
+            <input type="text" id="loginId" th:field="*{loginId}" class="form-control" th:errorclass="field-error" placeholder="ID를 입력하세요">
+            <div class="field-error" th:errors="*{loginId}" />
         </div>
 
         <div>
             <label for="password">비밀번호</label>
-            <input type="text" id="password" th:field="*{password}" class="form-control" placeholder="비밀번호를 입력하세요">
+            <input type="text" id="password" th:field="*{password}" class="form-control" th:errorclass="field-error" placeholder="비밀번호를 입력하세요">
+            <div class="field-error" th:errors="*{password}" />
         </div>
 
         <div>
-            <label for="password">휴대폰 번호</label>
-            <input type="text" maxlength="13" oninput="autoHyphen(this)" id="telno" th:field="*{telno}" class="form-control" placeholder="전화번호를 입력하세요">
+            <label for="telNo">휴대폰 번호</label>
+            <input type="text" maxlength="13" oninput="autoHyphen(this)" id="telNo" th:field="*{telNo}" class="form-control" placeholder="전화번호를 입력하세요">
         </div>
 
         <hr class="my-4">
@@ -47,17 +63,18 @@
         <div>IP 체크 여부</div>
         <div class="form-check">
             <input type="checkbox" id="ipCheck" th:field="*{ipCheck}" class="form-check-input" >
-            <label for="ipCheck"class="form-check-label">IP 체크</label>
+            <label for="ipCheck" class="form-check-label">IP 체크</label>
         </div>
 
         <hr class="my-4">
 
         <div>회원 종류</div>
         <div th:each="type: ${memberTypes}" class="form-check form-check-inline">
-            <input type="radio" th:field="*{memberType}" th:value="${type.name()}" class="form-check-input">
+            <input type="radio" th:field="*{memberType}" th:value="${type.name()}" class="form-check-input" th:errorclass="field-error">
             <label th:for="${#ids.prev('memberType')}" th:text="${type.description}" class="form-check-label">
             </label>
         </div>
+        <div class="field-error" th:errors="*{memberType}" />
 
         <hr class="my-4">
         <div class="row">

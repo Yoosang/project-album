@@ -4,10 +4,7 @@ import com.demian.album.admin.AdminRepository;
 import com.demian.album.admin.domain.Member;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Repository
 public class HashMapRepositoryImpl implements AdminRepository {
@@ -33,12 +30,27 @@ public class HashMapRepositoryImpl implements AdminRepository {
     }
 
     @Override
+    public Optional<Member> findByLoginedId(String loginedId) {
+//        List<Member> all = findAll();
+//        for(Member m : all) {
+//            if(m.getLoginId().equals(loginedId)){
+//                return Optional.of(m);
+//            }
+//        }
+//        return Optional.empty();
+
+        return findAll().stream()
+                .filter(m->m.getLoginId().equals(loginedId))
+                .findFirst();
+    }
+
+    @Override
     public void update(Long id, Member member) {
         Member targetMember = findById(id);
         targetMember.setName(member.getName());
         targetMember.setLoginId(member.getLoginId());
         targetMember.setPassword(member.getPassword());
-        targetMember.setTelno(member.getTelno());
+        targetMember.setTelNo(member.getTelNo());
         targetMember.setIpCheck(member.isIpCheck());
         targetMember.setMemberType(member.getMemberType());
     }

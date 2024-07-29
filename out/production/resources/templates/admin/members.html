@@ -31,13 +31,15 @@
             </thead>
             <tbody>
             <tr th:each="member : ${members}">
-                <td><a href="members.html"
+                <td>
+                    <a href="members.html"
                        th:href="@{/admin/members/{seq}(seq=${member.memberSeq})}"
-                       th:text="${member.memberSeq}">고객번호</a>
+                       th:text="${member.memberSeq}">고객번호
+                    </a>
                 </td>
-                <td th:text="${member.name}">고객명</a></td>
+                <td th:text="${member.name}">고객명</td>
                 <td th:text="${member.loginId}">아이디</td>
-                <td th:text="${member.telno}">전화번호</td>
+                <td th:text="${member.telNo}">전화번호</td>
             </tr>
             </tbody>
         </table>

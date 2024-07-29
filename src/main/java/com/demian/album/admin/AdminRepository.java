@@ -3,6 +3,7 @@ package com.demian.album.admin;
 import com.demian.album.admin.domain.Member;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface AdminRepository {
 
@@ -15,5 +16,7 @@ public interface AdminRepository {
     public void update(Long id, Member member);
 
     public void clearDb();
+
+    public Optional<Member> findByLoginedId(String loginedId);
 
 }
